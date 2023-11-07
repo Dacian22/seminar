@@ -2,10 +2,13 @@
 public class Main {
     public static void main(String[] args) {
         WeatherStation weatherStation = new WeatherStation();
-        PaperCurrentConditionsDisplay currentConditionsDisplay = new PaperCurrentConditionsDisplay(weatherStation);
-        weatherStation.setMeasurements(75, 60, 30);
+        PaperToElectronicAdapter adapter = new PaperToElectronicAdapter(weatherStation);
 
-        ElectronicDisplay display = new ElectronicDisplay(currentConditionsDisplay);
-        display.usedata();
+
+        ElectronicDisplay display = new ElectronicDisplay(adapter);
+
+        ElectronicDisplay2 display2 = new ElectronicDisplay2(adapter);
+
+        weatherStation.setMeasurements(11,12,13);
     }
 }

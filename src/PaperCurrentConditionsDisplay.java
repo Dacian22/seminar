@@ -12,10 +12,15 @@ public class PaperCurrentConditionsDisplay implements Observer,Display{
     }
 
     @Override
-    public void update(int temperature, int humidity, int pressure) {
-        this.display(temperature,humidity, pressure);
-        System.out.println("Temperature "+temperature);
-        System.out.println("Humidity "+humidity);
-        System.out.println("Pressure "+pressure);
+    public void update2() {
+
     }
+
+//    @Override
+//    public void update(int temperature, int humidity, int pressure) {
+//        this.display(temperature,humidity, pressure);
+//        System.out.println("Temperature "+temperature);
+//        System.out.println("Humidity "+humidity);
+//        System.out.println("Pressure "+pressure);
+//    }
 }

@@ -64,7 +64,7 @@ public class WeatherStation implements Observable,PaperData{
     @Override
     public void notifyObserver() {
         for(Observer observer: observers){
-            observer.update(this.temperature,this.humidity,this.pressure);
+            observer.update2();
         }
     }
 
